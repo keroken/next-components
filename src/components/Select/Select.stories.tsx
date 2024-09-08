@@ -16,7 +16,11 @@ const options = [
   { label: 'banana', value: 'banana' },
 ];
 
-const SelectWithHooks = () => {
+type Props = {
+  size: 'small' | 'medium';
+};
+
+const SelectWithHooks = ({size}: Props ) => {
   const [selectedOption, setSelectedOption] = useState('');
   const handleSelect = (value: string) => {
     setSelectedOption(value);
@@ -27,10 +31,14 @@ const SelectWithHooks = () => {
       options={options}
       onChange={handleSelect}
       selectedOptionValue={selectedOption}
+      size={size}
     />
   );
 };
 
-export const Default: Story = {
-  render: () => <SelectWithHooks />
+export const SizeSmall: Story = {
+  render: () => <SelectWithHooks size="small" />
+};
+export const SizeMedium: Story = {
+  render: () => <SelectWithHooks size="medium" />
 };

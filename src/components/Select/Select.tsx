@@ -5,10 +5,10 @@ import { selectSlotRecipe } from '../../../styled-system/recipes'
 
 
 
-export const Select = ({ placeholder, options, selectedOptionValue, onChange }: SelectProps) => {
+export const Select = ({ placeholder, options, selectedOptionValue, size, onChange }: SelectProps) => {
   const [IsListOpen, setIsListOpen] = useState(false);
 
-  const classes = selectSlotRecipe();
+  const classes = selectSlotRecipe({ size: size  === 'medium' ? 'medium' : 'small' });
 
   const handleClickTrigger = () => {
     setIsListOpen(prev => !prev);
