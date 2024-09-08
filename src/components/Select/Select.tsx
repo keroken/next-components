@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import { SelectList } from './SelectList';
-import { SelectOptionType } from './Select.types';
+import { type SelectProps } from './Select.types';
 import { selectSlotRecipe } from '../../../styled-system/recipes'
 
-type Props = {
-  placeholder: string;
-  options: SelectOptionType[];
-  selectedOptionValue: string;
-  onChange: (value: string) => void;
-}
 
-export const Select = ({ placeholder, options, selectedOptionValue, onChange }: Props) => {
+
+export const Select = ({ placeholder, options, selectedOptionValue, onChange }: SelectProps) => {
   const [IsListOpen, setIsListOpen] = useState(false);
 
   const classes = selectSlotRecipe();
