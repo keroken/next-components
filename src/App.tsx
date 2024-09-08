@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 import { Button } from './components/Button/Button'
+import { css } from '../styled-system/css';
+import { useState } from 'react';
+import { Select } from './components/Select/Select';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const options = [
+    { label: 'apple', value: 'apple' },
+    { label: 'orange', value: 'orange' },
+    { label: 'banana', value: 'banana' },
+  ]
+
+  const [selectedOption, setSelectedOption] = useState('')
+
+  const handleSelect = (value: string) => {
+    setSelectedOption(value)
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className={css({ fontSize: "2xl", fontWeight: "bold" })}>
+        Hello!
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <div className={css({ display: 'flex', flexDirection: 'column' })}>
         <Button />
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <Select
+          placeholder="please select fruit"
+          options={options}
+          selectedOptionValue={selectedOption}
+          onChange={handleSelect}
+        />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
