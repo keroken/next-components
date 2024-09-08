@@ -1,12 +1,18 @@
-import type{ Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 
 import { Select } from './Select';
 import { type SelectProps } from './Select.types';
 import { useState } from 'react';
 
-const meta: Meta<typeof Select> = {
+const meta = {
   component: Select,
-};
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  args: { onChange: fn() },
+} satisfies Meta<typeof Select>;
 
 export default meta;
 type Story = StoryObj<typeof Select>;
@@ -33,13 +39,13 @@ const SelectWithHooks = (props: SelectProps) => {
   );
 };
 
-export const SizeSmall: Story = {
+export const Small: Story = {
   args: {
     size: 'small',
   },
   render: args => <SelectWithHooks { ...args } />
 };
-export const SizeMedium: Story = {
+export const Medium: Story = {
   args: {
     size: 'medium',
   },
