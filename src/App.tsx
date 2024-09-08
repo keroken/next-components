@@ -1,7 +1,8 @@
-import { Button } from './components/Button/Button'
+import { Button } from './components/Button';
+import { Select } from './components/Select';
 import { css } from '../styled-system/css';
 import { useState } from 'react';
-import { Select } from './components/Select/Select';
+
 
 function App() {
   const options = [
