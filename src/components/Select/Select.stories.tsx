@@ -1,6 +1,7 @@
 import type{ Meta, StoryObj } from '@storybook/react';
 
 import { Select } from './Select';
+import { type SelectProps } from './Select.types';
 import { useState } from 'react';
 
 const meta: Meta<typeof Select> = {
@@ -16,11 +17,7 @@ const options = [
   { label: 'banana', value: 'banana' },
 ];
 
-type Props = {
-  size: 'small' | 'medium';
-};
-
-const SelectWithHooks = ({size}: Props ) => {
+const SelectWithHooks = (props: SelectProps) => {
   const [selectedOption, setSelectedOption] = useState('');
   const handleSelect = (value: string) => {
     setSelectedOption(value);
@@ -31,14 +28,20 @@ const SelectWithHooks = ({size}: Props ) => {
       options={options}
       onChange={handleSelect}
       selectedOptionValue={selectedOption}
-      size={size}
+      size={props.size}
     />
   );
 };
 
 export const SizeSmall: Story = {
-  render: () => <SelectWithHooks size="small" />
+  args: {
+    size: 'small',
+  },
+  render: args => <SelectWithHooks { ...args } />
 };
 export const SizeMedium: Story = {
-  render: () => <SelectWithHooks size="medium" />
+  args: {
+    size: 'medium',
+  },
+  render: args => <SelectWithHooks { ...args } />
 };

@@ -25,6 +25,7 @@ function App() {
       <div className={css({ display: 'flex', flexDirection: 'column' })}>
         <Button />
         <Select
+          size="medium"
           placeholder="please select fruit"
           options={options}
           selectedOptionValue={selectedOption}
