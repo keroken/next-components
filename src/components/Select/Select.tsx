@@ -25,7 +25,7 @@ export const Select = ({ placeholder, options, selectedOptionValue, size, onChan
         {selectedOptionValue ? selectedOptionValue : placeholder}
       </button>
       {IsListOpen &&
-        <SelectList options={options} onClickOption={handleClickOption} />
+        <SelectList options={options} size={size} onClickOption={handleClickOption} />
       }
     </>
   );

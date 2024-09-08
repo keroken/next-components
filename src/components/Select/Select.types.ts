@@ -3,10 +3,12 @@ export type SelectOptionType = {
   value: string,
 };
 
+export type SelectSizeType = 'small' | 'medium';
+
 export type SelectProps = {
   placeholder: string;
   options: SelectOptionType[];
   selectedOptionValue: string;
-  size?: 'small' | 'medium';
+  size: SelectSizeType;
   onChange: (value: string) => void;
 };
