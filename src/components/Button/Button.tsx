@@ -1,5 +1,5 @@
 export const Button = () => {
   return (
-    <button>Click me!</button>
+    <button onClick={() => alert('clicked!')}>Click me!</button>
   );
 };
