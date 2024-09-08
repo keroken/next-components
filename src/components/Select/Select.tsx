@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { SelectList } from './SelectList';
+import { SelectOptionType } from './Select.types';
 
 type Props = {
   placeholder: string;
-  options: {
-    label: string,
-    value: string,
-  }[];
+  options: SelectOptionType[];
   selectedOptionValue: string;
   onChange: (value: string) => void;
 }
@@ -24,13 +23,11 @@ export const Select = ({ placeholder, options, selectedOptionValue, onChange }: 
 
   return (
     <>
-      <button onClick={handleClickTrigger}>{selectedOptionValue ? selectedOptionValue : placeholder}</button>
+      <button onClick={handleClickTrigger}>
+        {selectedOptionValue ? selectedOptionValue : placeholder}
+      </button>
       {IsListOpen &&
-        <ul>
-          {options.map(option => (
-            <li onClick={() => handleClickOption(option.value)}>{option.label}</li>
-          ))}
-        </ul>
+        <SelectList options={options} onClickOption={handleClickOption} />
       }
     </>
   )
