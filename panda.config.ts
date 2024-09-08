@@ -18,6 +18,11 @@ export default defineConfig({
     },
   },
 
+  // for storybook
+  staticCss: {
+    recipes: '*',
+  },
+
   // The output directory for your css system
   outdir: "styled-system",
 });
