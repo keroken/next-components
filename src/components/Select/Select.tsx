@@ -12,12 +12,12 @@ export const Select = ({ placeholder, options, selectedOptionValue, onChange }: 
 
   const handleClickTrigger = () => {
     setIsListOpen(prev => !prev);
-  }
+  };
 
   const handleClickOption = (value: string) => {
     setIsListOpen(false);
     onChange(value);
-  }
+  };
 
   return (
     <>
@@ -28,5 +28,5 @@ export const Select = ({ placeholder, options, selectedOptionValue, onChange }: 
         <SelectList options={options} onClickOption={handleClickOption} />
       }
     </>
-  )
-}
+  );
+};

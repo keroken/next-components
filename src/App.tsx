@@ -9,13 +9,13 @@ function App() {
     { label: 'apple', value: 'apple' },
     { label: 'orange', value: 'orange' },
     { label: 'banana', value: 'banana' },
-  ]
+  ];
 
-  const [selectedOption, setSelectedOption] = useState('')
+  const [selectedOption, setSelectedOption] = useState('');
 
   const handleSelect = (value: string) => {
     setSelectedOption(value)
-  }
+  };
 
   return (
     <>
@@ -33,6 +33,6 @@ function App() {
       </div>
     </>
   )
-}
+};
 
-export default App
+export default App;

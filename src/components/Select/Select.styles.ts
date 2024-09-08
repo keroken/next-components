@@ -8,4 +8,4 @@ export const selectSlotRecipe = defineSlotRecipe({
     root: { display: 'flex', alignItems: 'center', gap: '2', backgroundColor: 'blue.300'},
     list : { border: '1px solid #666', borderRadius: 'sm' }
   }
-})
+});
