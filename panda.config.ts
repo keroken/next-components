@@ -1,5 +1,5 @@
 import { defineConfig } from "@pandacss/dev"
-import { selectRecipe } from "./src/components/Select/Select.styles"
+import recipes from './src/recipes'
 
 export default defineConfig({
   // Whether to use css reset
@@ -14,9 +14,7 @@ export default defineConfig({
   // Useful for theme customization
   theme: {
     extend: {
-      slotRecipes: {
-        select: selectRecipe
-      }
+      slotRecipes: recipes,
     },
   },
 

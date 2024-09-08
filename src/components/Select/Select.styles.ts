@@ -1,6 +1,6 @@
 import { defineSlotRecipe } from '@pandacss/dev';
 
-export const selectRecipe = defineSlotRecipe({
+export const selectSlotRecipe = defineSlotRecipe({
   className: 'select',
   description: 'The styles for the select component',
   slots: ['root', 'list', 'item'],

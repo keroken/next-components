@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { SelectList } from './SelectList';
 import { SelectOptionType } from './Select.types';
-import { select } from '../../../styled-system/recipes'
+import { selectSlotRecipe } from '../../../styled-system/recipes'
 
 type Props = {
   placeholder: string;
@@ -13,7 +13,7 @@ type Props = {
 export const Select = ({ placeholder, options, selectedOptionValue, onChange }: Props) => {
   const [IsListOpen, setIsListOpen] = useState(false);
 
-  const classes = select();
+  const classes = selectSlotRecipe();
 
   const handleClickTrigger = () => {
     setIsListOpen(prev => !prev);
