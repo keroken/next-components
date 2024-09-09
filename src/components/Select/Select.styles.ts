@@ -29,6 +29,8 @@ export const selectSlotRecipe = defineSlotRecipe({
     item: {
       display: 'flex',
       alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '1rem',
       padding: '0 1rem',
       fontSize: '1rem',
       _hover: {
