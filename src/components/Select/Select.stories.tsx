@@ -7,9 +7,6 @@ import { useState } from 'react';
 
 const meta = {
   component: Select,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
   args: { onChange: fn() },
 } satisfies Meta<typeof Select>;
