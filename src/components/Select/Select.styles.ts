@@ -24,6 +24,7 @@ export const selectSlotRecipe = defineSlotRecipe({
       borderColor: 'gray.500',
       borderRadius: 'sm',
       padding: '0.5rem 0',
+      marginTop: '0.25rem',
       width: 'max-content',
     },
     item: {
