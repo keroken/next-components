@@ -12,6 +12,7 @@ export const selectSlotRecipe = defineSlotRecipe({
       borderColor: 'gray.500',
       borderRadius: '0.5rem',
       width: 'fit-content',
+      minWidth: '160px',
       _hover: {
         background: 'gray.200',
       },
@@ -33,6 +34,7 @@ export const selectSlotRecipe = defineSlotRecipe({
       justifyContent: 'space-between',
       gap: '1rem',
       padding: '0 1rem',
+      minWidth: '160px',
       fontSize: '1rem',
       _hover: {
         background: 'gray.200',
