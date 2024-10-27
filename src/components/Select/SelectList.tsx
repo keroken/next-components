@@ -14,7 +14,7 @@ export const SelectList = ({ options, selectedValue, size, onClickOption }: Prop
   return (
     <ul className={classes.list}>
       {options.map(option => (
-        <li className={classes.item} onClick={() => onClickOption(option.value)}>{option.label}{option.value === selectedValue ? CheckIcon : null}</li>
+        <li key={option.value} className={classes.item} onClick={() => onClickOption(option.value)}>{option.label}{option.value === selectedValue ? CheckIcon : null}</li>
       ))}
     </ul>
   )

@@ -15,9 +15,9 @@ export default meta;
 type Story = StoryObj<typeof Select>;
 
 const options = [
-  { label: 'apple', value: 'apple' },
-  { label: 'orange', value: 'orange' },
-  { label: 'banana', value: 'banana' },
+  { id: 1, label: 'apple', value: 'apple' },
+  { id: 2, label: 'orange', value: 'orange' },
+  { id: 3, label: 'banana', value: 'banana' },
 ];
 
 const SelectWithHooks = (props: SelectProps) => {
