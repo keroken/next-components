@@ -6,9 +6,9 @@ import { useState } from 'react';
 
 function App() {
   const options = [
-    { label: 'apple', value: 'apple' },
-    { label: 'orange', value: 'orange' },
-    { label: 'banana', value: 'banana' },
+    { id: 1, label: 'apple', value: 'apple' },
+    { id: 2, label: 'orange', value: 'orange' },
+    { id: 3, label: 'banana', value: 'banana' },
   ];
 
   const [selectedOption, setSelectedOption] = useState('');
@@ -23,7 +23,7 @@ function App() {
         Hello!
       </div>
       <div className={css({ display: 'flex', flexDirection: 'column' })}>
-        <Button />
+      <Button size="medium" onClick={() => alert("clicked!")} />
         <Select
           size="medium"
           placeholder="please select fruit"
